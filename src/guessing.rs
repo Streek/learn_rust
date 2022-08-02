@@ -10,7 +10,7 @@ pub fn main() {
         guess = String::new();
 
         // set a random number between 1 and 10
-        let secret_number = rand::thread_rng().gen_range(1, 11);
+        let secret_number = rand::thread_rng().gen_range(1..11);
         println!("Guess a number between 1 and 10!  Or input q to quit.");
 
         //read the user input into the mutable variable

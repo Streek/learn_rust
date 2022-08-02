@@ -6,11 +6,11 @@ pub fn main() {
     let mut user_input = String::new();
     let mut user_score: u32 = 0;
     let mut computer_score: u32 = 0;
-    let mut _computer_pick: u32 = rand::thread_rng().gen_range(1, 4);
+    let mut _computer_pick: u32 = rand::thread_rng().gen_range(1..4);
 
     while user_input != "r" && user_input != "p" && user_input != "s" {
         user_input = String::new();
-        _computer_pick = rand::thread_rng().gen_range(1, 4);
+        _computer_pick = rand::thread_rng().gen_range(1..4);
 
         //print user and computer score
         println!(

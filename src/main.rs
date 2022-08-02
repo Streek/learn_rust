@@ -3,6 +3,7 @@ use std::io;
 // import main from guessing.rs
 mod guessing;
 mod rps;
+mod web_server;
 
 fn main() {
     // take user input
@@ -11,7 +12,8 @@ fn main() {
     // get input from user
     println!("1 - Guessing Game");
     println!("2 - Rock Paper Scissors");
-    println!("3 - Quit");
+    println!("3 - Web Server (Port 3000)");
+    println!("4 - Quit");
     println!("Enter your choice: ");
     io::stdin()
         .read_line(&mut input)
@@ -31,8 +33,10 @@ fn main() {
         1 => guessing::main(),
         // run rock paper scissors
         2 => rps::main(),
+        // run rock paper scissors
+        3 => web_server::main(),
         // quit
-        3 => println!("Thanks for playing!"),
+        4 => println!("Thanks for playing!"),
         _ => println!("Bye!"),
     };
 
